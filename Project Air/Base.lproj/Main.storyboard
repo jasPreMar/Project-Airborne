@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_Air" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="VP9-58-wc5" userLabel="Top Area">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dyL-fi-n2r" userLabel="Header Stack">
+                                        <rect key="frame" x="20" y="60" width="335" height="102"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv2-FE-vU0" userLabel="Header">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="79.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="64"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe your surroundings below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGD-T8-bTf" userLabel="Subtext">
+                                                <rect key="frame" x="0.0" y="79.5" width="335" height="22.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nkC-M2-ZPh" userLabel="Timer Stack">
+                                        <rect key="frame" x="20" y="194" width="335" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWL-pr-rfj" userLabel="Timer">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9h-wD-Ihh" userLabel="Reset Button">
+                                                <rect key="frame" x="177.5" y="0.0" width="157.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uzh-8h-1xy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aY4-Ei-Jcm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="60" leading="20" bottom="57" trailing="20"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L12-dp-s7F" userLabel="Bottom Area">
+                                <rect key="frame" x="0.0" y="281" width="375" height="386"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="5Lq-JY-5d1" userLabel="Selector Stack">
+                                        <rect key="frame" x="20" y="20" width="335" height="336"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dq4-w6-8xb" userLabel="Selector 1 Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qKY-c9-LCs" userLabel="Label 1 Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Environment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL6-aP-ZzJ" userLabel="Key">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nei-GY-bOa" userLabel="Value">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="TtG-AT-lIu" userLabel="Environment Selector">
+                                                        <rect key="frame" x="0.0" y="25" width="335" height="32"/>
+                                                        <segments>
+                                                            <segment title="" image="1 - Outside - XS"/>
+                                                            <segment title="" image="1 - Indoors - XS"/>
+                                                            <segment title="" image="1 - Tent - XS"/>
+                                                            <segment title="" image="1 - Car - XS"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="controllerSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="RrH-6h-1w3"/>
+                                                            <action selector="envSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z6E-Kk-SvL"/>
+                                                            <action selector="startTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="61T-bo-LS9"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-fp-12f" userLabel="Selector 2 Stack">
+                                                <rect key="frame" x="0.0" y="70" width="335" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vRP-dZ-SpL" userLabel="Label 2 Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ventilation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhD-2g-vMa" userLabel="Key">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-uN-KHy" userLabel="Value">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="iFF-UD-FF7" userLabel="Ventilation Selector">
+                                                        <rect key="frame" x="0.0" y="25" width="335" height="32"/>
+                                                        <segments>
+                                                            <segment title="" image="2 - Ventilated - XS"/>
+                                                            <segment title="" image="2 - Not Ventilated - XS"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="controllerSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="dVb-5a-KcG"/>
+                                                            <action selector="startTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zuq-n2-aSB"/>
+                                                            <action selector="ventSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="IZz-n0-lJ0"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Tz-aI-HSa" userLabel="Selector 3 Stack">
+                                                <rect key="frame" x="0.0" y="140" width="335" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-V4-E9A" userLabel="Label 3 Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distancing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNF-TH-QjB" userLabel="Key">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhd-EG-faz" userLabel="Value">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="5cJ-YX-5dT" userLabel="Distancing Selector">
+                                                        <rect key="frame" x="0.0" y="25" width="335" height="32"/>
+                                                        <segments>
+                                                            <segment title="" image="3 - Alone - XS"/>
+                                                            <segment title="" image="3 - Distancing - XS"/>
+                                                            <segment title="" image="3 - Crowding - XS"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="controllerSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="GEE-wX-fGX"/>
+                                                            <action selector="distSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="QJm-6D-g2j"/>
+                                                            <action selector="startTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="y5g-QJ-Tzb"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JXB-Z8-uSa" userLabel="Selector 4 Stack">
+                                                <rect key="frame" x="0.0" y="210" width="335" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VQ5-BC-RhK" userLabel="Label 4 Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbu-BU-RAa" userLabel="Key">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWU-9s-988" userLabel="Value">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Lbi-LM-8Jw" userLabel="Talking Selector">
+                                                        <rect key="frame" x="0.0" y="25" width="335" height="32"/>
+                                                        <segments>
+                                                            <segment title="" image="4 - Silent - XS"/>
+                                                            <segment title="" image="4 - Taking - XS"/>
+                                                            <segment title="" image="4 - Shouting - XS"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="controllerSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pu8-Px-1o2"/>
+                                                            <action selector="startTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="DxE-Tv-F2D"/>
+                                                            <action selector="talkSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="V3j-ZZ-dXe"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vFD-aQ-oPN" userLabel="Selector 5 Stack">
+                                                <rect key="frame" x="0.0" y="280" width="335" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fEg-K2-DCW" userLabel="Label 5 Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETz-FZ-xNX" userLabel="Key">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-s1-3Ce" userLabel="Value">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="s3F-ct-Bch" userLabel="Masking Selector">
+                                                        <rect key="frame" x="0.0" y="25" width="335" height="32"/>
+                                                        <segments>
+                                                            <segment title="" image="5 - Mask - XS"/>
+                                                            <segment title="" image="5 - No Mask - XS"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="controllerSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="xGb-cD-wFk"/>
+                                                            <action selector="maskSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="kaZ-mL-eIK"/>
+                                                            <action selector="startTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="MeN-hv-UcV"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="30" trailing="20"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VP9-58-wc5" secondAttribute="trailing" id="0U2-tV-hWr"/>
+                            <constraint firstItem="VP9-58-wc5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B2j-WL-bSo"/>
+                            <constraint firstAttribute="trailing" secondItem="L12-dp-s7F" secondAttribute="trailing" id="Cgs-Ua-A2J"/>
+                            <constraint firstItem="L12-dp-s7F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ElD-bt-o23"/>
+                            <constraint firstAttribute="bottom" secondItem="VP9-58-wc5" secondAttribute="bottom" constant="386" id="XhJ-kz-cwc"/>
+                            <constraint firstAttribute="bottom" secondItem="L12-dp-s7F" secondAttribute="bottom" id="r4u-bX-RQF"/>
+                            <constraint firstItem="VP9-58-wc5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wXh-cJ-0O8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="distControl" destination="5cJ-YX-5dT" id="5Qx-f0-zTg"/>
+                        <outlet property="distKey" destination="XNF-TH-QjB" id="TxG-eC-hUS"/>
+                        <outlet property="distValue" destination="Xhd-EG-faz" id="dys-ne-Csx"/>
+                        <outlet property="envControl" destination="TtG-AT-lIu" id="e9V-l2-gBa"/>
+                        <outlet property="envKey" destination="iL6-aP-ZzJ" id="yNZ-ig-bST"/>
+                        <outlet property="envValue" destination="nei-GY-bOa" id="kWb-xW-Lc5"/>
+                        <outlet property="headerLabel" destination="gv2-FE-vU0" id="P2L-MD-0SV"/>
+                        <outlet property="maskControl" destination="s3F-ct-Bch" id="Yx0-t5-j1H"/>
+                        <outlet property="maskKey" destination="ETz-FZ-xNX" id="GJy-aR-Qvo"/>
+                        <outlet property="maskValue" destination="2h1-s1-3Ce" id="27s-PM-f0z"/>
+                        <outlet property="resetButton" destination="w9h-wD-Ihh" id="Zkc-wu-Izu"/>
+                        <outlet property="subtextLabel" destination="NGD-T8-bTf" id="Zmg-25-Epm"/>
+                        <outlet property="talkControl" destination="Lbi-LM-8Jw" id="wQB-eI-Mdc"/>
+                        <outlet property="talkKey" destination="dbu-BU-RAa" id="F9X-7p-Qbb"/>
+                        <outlet property="talkValue" destination="yWU-9s-988" id="it1-2C-3IP"/>
+                        <outlet property="timerLabel" destination="iWL-pr-rfj" id="Akd-HL-QsL"/>
+                        <outlet property="topAreaColor" destination="VP9-58-wc5" id="UQy-5f-pbo"/>
+                        <outlet property="ventControl" destination="iFF-UD-FF7" id="kMf-DJ-jBc"/>
+                        <outlet property="ventKey" destination="dhD-2g-vMa" id="E8G-Q1-djY"/>
+                        <outlet property="ventValue" destination="jzT-uN-KHy" id="sq3-en-J0t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="119"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1 - Car - XS" width="29" height="20"/>
+        <image name="1 - Indoors - XS" width="20" height="20"/>
+        <image name="1 - Outside - XS" width="20" height="20"/>
+        <image name="1 - Tent - XS" width="20" height="20"/>
+        <image name="2 - Not Ventilated - XS" width="20" height="20"/>
+        <image name="2 - Ventilated - XS" width="20" height="20"/>
+        <image name="3 - Alone - XS" width="20" height="20"/>
+        <image name="3 - Crowding - XS" width="23" height="24"/>
+        <image name="3 - Distancing - XS" width="32" height="20"/>
+        <image name="4 - Shouting - XS" width="22" height="20"/>
+        <image name="4 - Silent - XS" width="20" height="20"/>
+        <image name="4 - Taking - XS" width="20" height="20"/>
+        <image name="5 - Mask - XS" width="24" height="20"/>
+        <image name="5 - No Mask - XS" width="24" height="20"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
